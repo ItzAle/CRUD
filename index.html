@@ -7,15 +7,49 @@
     <script src="./main.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css" />
-    <title>CRUD</title>
+    <title>DreamOn</title>
   </head>
   <body>
-    <div class="menu">
-      <input type="text" id="input" />
-      <button id="submit" onclick="addItem()">Add</button>
+    <header class="main">
+      <div class="toggleBox">
+        <i class="bi bi-plus"onclick="showMenu()"></i>
+        <div class="DOM">
+          <input 
+          class="searchbar"
+          type="text"
+          value=""
+          name="searchbar"
+          placeholder="Search">
+      <nav class="navigation">
+    <h1>Enter title and image URL</h1>
+      <div class="title_container">
+        <label for="Input">Title</label>
+        <input
+          id="addTitle"
+          type="text"
+          value=""
+          name="title"
+          placeholder="Name"
+        />
+      </div>
+      <div class="iimg">
+        <label for="imgInput">URL</label>
+        <input
+          name="imgInput"
+          id="addImage"
+          type="text"
+          value=""
+          placeholder="URL"
+        />
+      </div>
+      <button onclick="addItem()" id="add_item_button">Add</button>
     </div>
-    <div class="ul">
-      <ul class="DOM" id="listDOM"></ul>
+  </div>
+  </header>
+
+</nav>
+  <section class="content">
+    <ul id="list"></ul>
     </div>
   </body>
 </html>

@@ -5,36 +5,8 @@
     margin: 0;
     list-style: none;
     font-family: Poppins;
-    text-transform: uppercase;
 }
 
-.DOM{
-    padding-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-}
-
-li{
-    display: flex;
-    justify-content: center;
-}
-
-i{
-    display: flex;
-    gap: 20px;
-    justify-content: flex-end;
-}
-
-.template{
-    background-color:grey;
-    padding-bottom: 20px;
-}
-
-input{
-    
-}
 
 button{
     border: 1px transparent;
@@ -49,10 +21,93 @@ button:hover{
     color:dimgrey;
 }
 
-.buttons{
+.name{
+    align-self: center;
+    background-color: white;
+    border-color: white;
+    border-style: none;
+    
+}
+
+.container{
+    padding-top: 20px;
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.text{
+    background-color: rgb(37, 31, 31);
+    padding: 20px;
+    border-radius: 20px;
+}
+.name{
+    background-color: rgb(37, 31, 31);
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+}
+.img{
+    border-radius: 20px;
+    width: 100%;
+    height: 200px;
+}
+.img img{
+    max-width: 100%; 
+    max-height: 300px;
+}
+
+.title{
+    font-weight: bolder;
+    color: white;
+    font-size: 30px;
+}
+
+
+nav.navigation{
+    display: none;
+}
+
+nav.navigation.active{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.bi-plus{
     color: black;
-    gap: 15px;
-    padding-right: 15px;
+    font-size: 50px;
+    position: relative;
+    left: 90%;
+}
+
+.bi-trash3-fill,.bi-pencil{
+    color: white;
+}
+
+.DOM {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+p.title{
+    font-size: 1rem;
+}
+
+input.name{
+    font-size: 1rem;
 }
