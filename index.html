@@ -11,19 +11,23 @@
   </head>
   <body>
     <header class="main">
-      <div class="toggleBox">
-        <i class="bi bi-plus"onclick="showMenu()"></i>
-        <div class="DOM">
+      <div class="divbar">
+        <li><a id="github" target="_blank" href="https://github.com/ItzAle/CRUD">Github</a></li>
           <input 
           id="search_bar"
           onkeyup="search()"
           class="searchbar"
           type="text"
           value=""
-          name="searchbar""
+          name="searchbar"
           placeholder="Search">
+          <ul>
+
+            <i class="bi bi-plus"onclick="showMenu()"></i>
+          </ul>
+        </div>
       <nav class="navigation">
-    <h1>Enter title and image URL</h1>
+    <h1 class="h1">Enter title and image URL</h1>
       <div class="title_container">
         <label for="Input">Title</label>
         <input
@@ -45,13 +49,10 @@
         />
       </div>
       <button onclick="addItem()" id="add_item_button">Add</button>
-    </div>
-  </div>
   </header>
-
 </nav>
   <section class="content">
     <ul id="list"></ul>
-    </div>
+  </section>
   </body>
 </html>
