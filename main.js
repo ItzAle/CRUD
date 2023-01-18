@@ -23,17 +23,18 @@ function addItem() {
         Objects.name = titleInput.value;
         Objects.photoUrl = urlInput.value;
         data.push(Objects);
-    render();
     }
+    titleInput.value = "";
+    urlInput.value = "";
+    render();
 }
 
 // Edita este objeto y cambia add por update 
-// function editByIndex(index){
-//     data.value = data[index];
-//     isEditMode = true;
-//     indexToEdit = index;
-//     submit.innerText = "update";
-// }
+function editByIndex(index){
+    data.value = data[index];
+    isEditMode = true;
+    indexToEdit = index;
+}
 // Cambia de "Update" a "Add" de nuevo 
 const toAddMode = () => {
     isEditMode = false
@@ -62,11 +63,8 @@ function render() {
                 <input
                     type="text"
                     class="name"
-                    value="${data[i].name}"
-                    readonly="true"
-                />
+                    value="${data[i].name}"/>
                 <i class="bi bi-trash3-fill" onclick="deleteByIndex(${i})"></i>
-                <i class="bi bi-pencil" onclick="editByIndex()"></i>
             </div>
         </li>`
     }
@@ -83,6 +81,7 @@ function isValidUrl(urlString) {
     '(\\#[-a-z\\d_]*)?$','i'); // validate fragment locator
     return !!urlPattern.test(urlString);
 } 
+
 
 //Funcion que abre el menu 
 function showMenu(){

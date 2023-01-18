@@ -5,6 +5,8 @@
     margin: 0;
     list-style: none;
     font-family: Poppins;
+    scroll-behavior: smooth;
+    transition: all 0.6s;
 }
 
 
@@ -74,9 +76,11 @@ ul{
 
 nav.navigation{
     display: none;
+    transition: all 0.4s;
 }
 
 nav.navigation.active{
+    transition: all 0.4s;
     padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -91,6 +95,14 @@ nav.navigation.active{
     font-size: 50px;
     position: relative;
     left: 90%;
+}
+.bi-plus:hover{
+    color: grey;
+}
+.bi-trash3-fill:hover{
+    transition: all 0.4s;
+    color: red;
+    
 }
 
 .bi-trash3-fill,.bi-pencil{
