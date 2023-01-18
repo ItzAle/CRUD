@@ -15,6 +15,8 @@
         <i class="bi bi-plus"onclick="showMenu()"></i>
         <div class="DOM">
           <input 
+          id="search_bar"
+          onkeyup="search()"
           class="searchbar"
           type="text"
           value=""
@@ -32,7 +34,7 @@
           placeholder="Name"
         />
       </div>
-      <div class="iimg">
+      <div class="img">
         <label for="imgInput">URL</label>
         <input
           name="imgInput"

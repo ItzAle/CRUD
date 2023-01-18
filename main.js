@@ -48,7 +48,8 @@ function render() {
     let template = "";
     for (let i = 0; i < data.length; i++) {
         template += 
-        `<li class="container" id="item-${i}">
+        `
+        <li class="container" id="item-${i}">
             <div class="img_container">
                 <img
                     class="img"
@@ -83,29 +84,26 @@ function isValidUrl(urlString) {
     return !!urlPattern.test(urlString);
 } 
 
+//Funcion que abre el menu 
 function showMenu(){
     document.querySelector('.navigation').classList.toggle('active')
 }
 
+// Funcion de busqueda
 
-// Intento de barra de busqueda
-// let input, filter , ul , li, a , i, txtValue;
+function search(){
+    let input = document.getElementById('search_bar').value
+    input = input.toLowerCase();
+    let x = document.getElementsByClassName('container');
 
-// input = document.getElementById('searchbar');
-// filter = input.value.toUpperCase();
-// ul = document.getElementById("list");
-// li = ul.getElementsByTagName('li');
-
-// for(i = 0; < li.length; i++){
-//     a= li[i].getElementsByTagName("a")[0];
-//     txtValue = a.textContent || a.innerText;
-//     if(txtValue.toUpperCase().indexOf(filter)>-1){
-//         li[i].style.display = "";
-//     }else{
-//         li[i].style.display = "none";
-//     }
-// }
-
+    for(i = 0; i < x.length; i++){
+        if(!x[i].innerHTML.toLowerCase().includes(input)){
+            x[i].style.display ="none";
+        }
+        else{
+            x[i].style.display = "list-item"
+        }
+    }
+}
 
 render();
-
