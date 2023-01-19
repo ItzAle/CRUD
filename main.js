@@ -3,16 +3,17 @@
 let itemListDOM = document.getElementById("list");
 let urlInput = document.getElementById("addImage");
 let titleInput = document.getElementById("addTitle");
-let UpdateURL = document.getElementById("newURL")
-let data = [{
+let UpdateURL = document.getElementById("newURL");
+let data = [
+  {
     name: "salmon",
     photoUrl: "https://soycomocomo.es/media/2016/02/salmon-600.gif",
   },
   {
     name: "Queso",
     photoUrl: "https://mencas.es/337-large_default/queso-mezcla.jpg",
-  },];
-
+  },
+];
 
 // funcion que borra la pulsar el boton de borrar
 function deleteByIndex(index) {
@@ -51,17 +52,17 @@ function addItem() {
 // }
 
 // Edita este objeto y cambia add por update
-function editByIndex(index) {
-  data.value = data[index];
-  isEditMode = true;
-  indexToEdit = index;
-}
+// function editByIndex(index) {
+//   data.value = data[index];
+//   isEditMode = true;
+//   indexToEdit = index;
+// }
 // Cambia de "Update" a "Add" de nuevo
-const toAddMode = () => {
-  isEditMode = false;
-  submit.innerText = "Add";
-  indexToEdit = null;
-};
+// const toAddMode = () => {
+//   isEditMode = false;
+//   submit.innerText = "Add";
+//   indexToEdit = null;
+// };
 // Boton de editar (nuevo)
 
 //RENDER
@@ -84,15 +85,15 @@ function render() {
                     type="text"
                     class="name"
                     value="${data[i].name}"/>
-                    <div class="editurl">
-                    <label for="editurl">img URL</label>
-                    <input type="text"
-                    name="editurl"
-                    type="text"
-                    value=""
-                    id = "newURL"
-                    placeholder="new url">
-                    <button id="updatebtn" onclick="updateURL()">Update</button>
+            <div class="editurl">
+                <label for="editurl">img URL</label>
+                <input type="text"
+                      name="editurl"
+                      type="text"
+                      value=""
+                      id = "newURL"
+                      placeholder="new url">
+                <button id="updatebtn" onclick="updateURL()">Update</button>
                   </div>
                 <i class="bi bi-trash3-fill" onclick="deleteByIndex(${i})"></i>
                 <i class="bi bi-pencil-fill" onclick="editByIndex"></i>
@@ -100,7 +101,7 @@ function render() {
             
         </li>`;
   }
-  localStorage.getItem('item');
+  localStorage.getItem("item");
   itemListDOM.innerHTML = template;
 }
 
@@ -140,4 +141,3 @@ function search() {
 }
 
 render();
-
