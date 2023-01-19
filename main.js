@@ -18,6 +18,7 @@ let data = [
 // funcion que borra la pulsar el boton de borrar
 function deleteByIndex(index) {
   data.splice(index, 1);
+  search_bar.value = "";
   render();
 }
 
@@ -43,27 +44,18 @@ function addItem() {
   render();
 }
 // function updateURL(){
-//     if(isValidUrl(newURL.value)
+//     if(newURL.value!=""&&
+//       titleInput.value != "name"
 //     ){
-//     let photos = new photo()
-//     photos.photoUrl = newURL.value;
-//     data.push(photos);
+//     let Objects = data[items];
+//     Objects.photoUrl = newURL.value;
+//     data.push(Objects);
 //     }
+//     newURL.value="";
+//     render()
 // }
 
-// Edita este objeto y cambia add por update
-// function editByIndex(index) {
-//   data.value = data[index];
-//   isEditMode = true;
-//   indexToEdit = index;
-// }
-// Cambia de "Update" a "Add" de nuevo
-// const toAddMode = () => {
-//   isEditMode = false;
-//   submit.innerText = "Add";
-//   indexToEdit = null;
-// };
-// Boton de editar (nuevo)
+
 
 //RENDER
 
@@ -139,5 +131,6 @@ function search() {
     }
   }
 }
+
 
 render();
