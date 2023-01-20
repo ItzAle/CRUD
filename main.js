@@ -22,11 +22,11 @@ function deleteByIndex(index) {
   render();
 }
 
-// Añade un objeto al array
-const items = {
-  name: "",
-  photoUrl: "",
-};
+// // Añade un objeto al array
+// const items = {
+//   name: "",
+//   photoUrl: "",
+// };
 
 function addItem() {
   if (
@@ -43,6 +43,9 @@ function addItem() {
   urlInput.value = "";
   render();
 }
+
+
+// No funciona
 // function updateURL(){
 //     if(newURL.value!=""&&
 //       titleInput.value != "name"
@@ -93,7 +96,6 @@ function render() {
             
         </li>`;
   }
-  localStorage.getItem("item");
   itemListDOM.innerHTML = template;
 }
 

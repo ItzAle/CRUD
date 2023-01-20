@@ -14,8 +14,10 @@
 - Conseguir manejar datos
 - Manipular el DOM
 - Esconder esconder el formulario con un botón
+- Barra de busqueda que filtre los items por el título
+- Formulario que edite las propiedades del item correspondiente (solo el titulo)
 
 ### ¿Qué me falta por conseguir?
 
-- Barra de busqueda que filtre los items por el título
-- Formulario que edite las propiedades del item correspondiente
+- Poder editar las imagenes
+- Local Storage
