@@ -46,17 +46,17 @@ function addItem() {
 
 
 // No funciona
-// function updateURL(){
-//     if(newURL.value!=""&&
-//       titleInput.value != "name"
-//     ){
-//     let Objects = data[items];
-//     Objects.photoUrl = newURL.value;
-//     data.push(Objects);
-//     }
-//     newURL.value="";
-//     render()
-// }
+function updateURL(){
+    if(newURL.value!=""&&
+      titleInput.value != "name"
+    ){
+    let Objects = data[items];
+    Objects.photoUrl = newURL.value;
+    data.push(Objects);
+    }
+    newURL.value="";
+    render()
+}
 
 
 
